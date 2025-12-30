@@ -1,0 +1,238 @@
+
+
+.page-header {
+    text-align: center;
+    margin-bottom: var(--space-xl);
+    animation: fadeInUp 0.6s var(--transition-smooth);
+}
+
+.page-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin-bottom: var(--space-sm);
+    background: linear-gradient(135deg, var(--cloud-white), var(--rain-blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.page-subtitle {
+    color: var(--mist);
+    font-size: 1.1rem;
+}
+
+/* Year Selector Card */
+.selector-card {
+    max-width: 600px;
+    margin: 0 auto var(--space-xl);
+}
+
+.form-group {
+    margin-bottom: var(--space-md);
+}
+
+.form-label {
+    display: block;
+    color: var(--cloud-white);
+    font-weight: 600;
+    margin-bottom: var(--space-xs);
+    font-size: 0.95rem;
+}
+
+.form-select {
+    width: 100%;
+    padding: var(--space-md);
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--cloud-white);
+    background: rgba(10, 22, 40, 0.6);
+    border: 2px solid rgba(74, 144, 226, 0.3);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.form-select:hover {
+    border-color: var(--rain-blue);
+}
+
+.form-select:focus {
+    outline: none;
+    border-color: var(--rain-blue);
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.2);
+}
+
+.form-select option {
+    background: var(--storm-blue);
+    color: var(--cloud-white);
+    padding: var(--space-sm);
+}
+
+/* Data Table */
+.data-table-container {
+    overflow-x: auto;
+    border-radius: 12px;
+    background: rgba(10, 22, 40, 0.4);
+    border: 1px solid rgba(74, 144, 226, 0.2);
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: var(--font-mono);
+}
+
+.data-table thead {
+    background: rgba(74, 144, 226, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.data-table th {
+    padding: var(--space-md) var(--space-lg);
+    text-align: left;
+    font-weight: 700;
+    color: var(--cloud-white);
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+    border-bottom: 2px solid rgba(74, 144, 226, 0.3);
+}
+
+.data-table tbody tr {
+    border-bottom: 1px solid rgba(74, 144, 226, 0.1);
+    transition: background var(--transition-fast);
+}
+
+.data-table tbody tr:hover {
+    background: rgba(74, 144, 226, 0.1);
+}
+
+.data-table td {
+    padding: var(--space-md) var(--space-lg);
+    color: var(--mist);
+    font-size: 0.95rem;
+}
+
+.data-table tbody tr:last-child {
+    border-bottom: none;
+}
+
+/* Empty State */
+.table-empty {
+    padding: var(--space-xl);
+    text-align: center;
+    color: var(--mist);
+}
+
+.table-empty .icon {
+    font-size: 3rem;
+    opacity: 0.3;
+    margin-bottom: var(--space-sm);
+}
+
+/* Stats Cards */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--space-md);
+    margin-bottom: var(--space-xl);
+}
+
+.stat-card {
+    background: rgba(10, 22, 40, 0.6);
+    border: 1px solid rgba(74, 144, 226, 0.2);
+    border-radius: 12px;
+    padding: var(--space-md);
+    text-align: center;
+    transition: all var(--transition-smooth);
+}
+
+.stat-card:hover {
+    border-color: var(--rain-blue);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(74, 144, 226, 0.2);
+}
+
+.stat-value {
+    font-size: 2rem;
+    font-weight: 800;
+    font-family: var(--font-mono);
+    color: var(--rain-blue);
+    margin-bottom: var(--space-xs);
+}
+
+.stat-label {
+    color: var(--mist);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Chart Container */
+.chart-container {
+    background: rgba(10, 22, 40, 0.6);
+    border: 1px solid rgba(74, 144, 226, 0.2);
+    border-radius: 12px;
+    padding: var(--space-lg);
+    margin-bottom: var(--space-xl);
+    min-height: 400px;
+}
+
+.chart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-lg);
+    padding-bottom: var(--space-md);
+    border-bottom: 1px solid rgba(74, 144, 226, 0.2);
+}
+
+.chart-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--cloud-white);
+}
+
+/* Back Button */
+.btn-back {
+    background: rgba(45, 62, 80, 0.8);
+    color: var(--cloud-white);
+    border: 1px solid rgba(74, 144, 226, 0.2);
+}
+
+.btn-back:hover {
+    background: rgba(74, 144, 226, 0.2);
+    border-color: var(--rain-blue);
+    transform: translateY(-2px);
+}
+
+/* Rainfall bars visualization in table */
+.rainfall-bar {
+    display: inline-block;
+    height: 8px;
+    background: linear-gradient(90deg, var(--rain-blue), var(--lightning));
+    border-radius: 4px;
+    margin-left: var(--space-sm);
+    vertical-align: middle;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .page-title {
+        font-size: 2rem;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .data-table th,
+    .data-table td {
+        padding: var(--space-sm) var(--space-md);
+        font-size: 0.85rem;
+    }
+}
