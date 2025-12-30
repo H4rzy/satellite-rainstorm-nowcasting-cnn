@@ -1,0 +1,145 @@
+2025-12-20 15:41:37,680 - __main__ - INFO - Loading prediction model...
+2025-12-20 15:41:40,520 - __main__ - INFO - Model loaded successfully
+2025-12-20 15:41:40,521 - __main__ - INFO - Prediction service initialized
+2025-12-20 15:41:40,528 - services.data_service - INFO - Successfully loaded 1826 rainfall records
+2025-12-20 15:41:40,528 - __main__ - INFO - Data service initialized
+2025-12-20 15:41:40,529 - __main__ - INFO - Blueprints registered
+2025-12-20 15:41:40,529 - __main__ - INFO - Starting application in development mode
+2025-12-20 15:41:40,583 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-12-20 15:41:40,584 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-12-20 15:41:40,585 - werkzeug - INFO -  * Restarting with stat
+2025-12-20 15:41:45,370 - __main__ - INFO - Loading prediction model...
+2025-12-20 15:41:45,697 - __main__ - INFO - Model loaded successfully
+2025-12-20 15:41:45,697 - __main__ - INFO - Prediction service initialized
+2025-12-20 15:41:45,703 - services.data_service - INFO - Successfully loaded 1826 rainfall records
+2025-12-20 15:41:45,703 - __main__ - INFO - Data service initialized
+2025-12-20 15:41:45,704 - __main__ - INFO - Blueprints registered
+2025-12-20 15:41:45,704 - __main__ - INFO - Starting application in development mode
+2025-12-20 15:41:45,718 - werkzeug - WARNING -  * Debugger is active!
+2025-12-20 15:41:45,731 - werkzeug - INFO -  * Debugger PIN: 146-006-496
+2025-12-20 15:41:50,503 - werkzeug - INFO - 127.0.0.1 - - [20/Dec/2025 15:41:50] "GET / HTTP/1.1" 200 -
+2025-12-20 15:41:50,509 - werkzeug - INFO - 127.0.0.1 - - [20/Dec/2025 15:41:50] "GET / HTTP/1.1" 200 -
+2025-12-20 15:41:50,732 - werkzeug - INFO - 127.0.0.1 - - [20/Dec/2025 15:41:50] "GET /static/js/main.js HTTP/1.1" 200 -
+2025-12-20 15:41:50,739 - werkzeug - INFO - 127.0.0.1 - - [20/Dec/2025 15:41:50] "GET /static/css/main.css HTTP/1.1" 200 -
+2025-12-20 15:41:50,746 - werkzeug - INFO - 127.0.0.1 - - [20/Dec/2025 15:41:50] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-12-20 15:41:50,750 - werkzeug - INFO - 127.0.0.1 - - [20/Dec/2025 15:41:50] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2025-12-20 15:41:51,304 - __main__ - WARNING - 404 error: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-12-20 15:41:51,305 - werkzeug - INFO - 127.0.0.1 - - [20/Dec/2025 15:41:51] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-12-20 15:42:00,254 - werkzeug - INFO - 127.0.0.1 - - [20/Dec/2025 15:42:00] "GET /rainfall HTTP/1.1" 200 -
+2025-12-20 15:42:00,305 - werkzeug - INFO - 127.0.0.1 - - [20/Dec/2025 15:42:00] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2025-12-20 15:42:00,317 - werkzeug - INFO - 127.0.0.1 - - [20/Dec/2025 15:42:00] "GET /static/css/rainfall.css HTTP/1.1" 200 -
+2025-12-20 15:42:00,318 - werkzeug - INFO - 127.0.0.1 - - [20/Dec/2025 15:42:00] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-12-20 15:42:04,729 - services.data_service - INFO - Retrieved 93 records for year 2020
+2025-12-20 15:42:04,729 - routes.main_routes - INFO - Retrieved rainfall data for year 2020
+2025-12-20 15:42:04,740 - werkzeug - INFO - 127.0.0.1 - - [20/Dec/2025 15:42:04] "POST /rainfall HTTP/1.1" 200 -
+2025-12-20 15:42:04,768 - werkzeug - INFO - 127.0.0.1 - - [20/Dec/2025 15:42:04] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2025-12-20 15:42:04,772 - werkzeug - INFO - 127.0.0.1 - - [20/Dec/2025 15:42:04] "[36mGET /static/css/rainfall.css HTTP/1.1[0m" 304 -
+2025-12-20 15:42:04,774 - werkzeug - INFO - 127.0.0.1 - - [20/Dec/2025 15:42:04] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-12-20 15:42:13,903 - werkzeug - INFO - 127.0.0.1 - - [20/Dec/2025 15:42:13] "GET / HTTP/1.1" 200 -
+2025-12-20 15:42:13,951 - werkzeug - INFO - 127.0.0.1 - - [20/Dec/2025 15:42:13] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2025-12-20 15:42:13,955 - werkzeug - INFO - 127.0.0.1 - - [20/Dec/2025 15:42:13] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-12-20 15:44:25,698 - services.prediction_service - ERROR - Error loading image: <COMPRESSION.LZW: 5> requires the 'imagecodecs' package
+2025-12-20 15:44:25,698 - services.prediction_service - ERROR - Error in prediction pipeline: <COMPRESSION.LZW: 5> requires the 'imagecodecs' package
+2025-12-20 15:44:25,698 - routes.main_routes - ERROR - Error processing prediction: <COMPRESSION.LZW: 5> requires the 'imagecodecs' package
+2025-12-20 15:44:25,699 - werkzeug - INFO - 127.0.0.1 - - [20/Dec/2025 15:44:25] "POST / HTTP/1.1" 200 -
+2025-12-20 15:44:25,735 - werkzeug - INFO - 127.0.0.1 - - [20/Dec/2025 15:44:25] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2025-12-20 15:44:25,738 - werkzeug - INFO - 127.0.0.1 - - [20/Dec/2025 15:44:25] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-12-20 15:53:43,480 - __main__ - INFO - Loading prediction model...
+2025-12-20 15:53:43,907 - __main__ - INFO - Model loaded successfully
+2025-12-20 15:53:43,907 - __main__ - INFO - Prediction service initialized
+2025-12-20 15:53:43,922 - services.data_service - INFO - Successfully loaded 1826 rainfall records
+2025-12-20 15:53:43,922 - __main__ - INFO - Data service initialized
+2025-12-20 15:53:43,923 - __main__ - INFO - Blueprints registered
+2025-12-20 15:53:43,924 - __main__ - INFO - Starting application in development mode
+2025-12-20 15:53:43,948 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-12-20 15:53:43,949 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-12-20 15:53:43,950 - werkzeug - INFO -  * Restarting with stat
+2025-12-20 15:53:48,031 - __main__ - INFO - Loading prediction model...
+2025-12-20 15:53:48,324 - __main__ - INFO - Model loaded successfully
+2025-12-20 15:53:48,324 - __main__ - INFO - Prediction service initialized
+2025-12-20 15:53:48,329 - services.data_service - INFO - Successfully loaded 1826 rainfall records
+2025-12-20 15:53:48,330 - __main__ - INFO - Data service initialized
+2025-12-20 15:53:48,331 - __main__ - INFO - Blueprints registered
+2025-12-20 15:53:48,331 - __main__ - INFO - Starting application in development mode
+2025-12-20 15:53:48,343 - werkzeug - WARNING -  * Debugger is active!
+2025-12-20 15:53:48,347 - werkzeug - INFO -  * Debugger PIN: 146-006-496
+2025-12-26 10:09:39,721 - __main__ - INFO - Loading prediction model...
+2025-12-26 10:09:40,745 - __main__ - INFO - Model loaded successfully
+2025-12-26 10:09:40,746 - __main__ - INFO - Prediction service initialized
+2025-12-26 10:09:40,786 - services.data_service - INFO - Successfully loaded 1826 rainfall records
+2025-12-26 10:09:40,786 - __main__ - INFO - Data service initialized
+2025-12-26 10:09:40,789 - __main__ - INFO - Blueprints registered
+2025-12-26 10:09:40,789 - __main__ - INFO - Starting application in development mode
+2025-12-26 10:09:40,877 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-12-26 10:09:40,877 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-12-26 10:09:40,880 - werkzeug - INFO -  * Restarting with stat
+2025-12-26 10:09:52,390 - __main__ - INFO - Loading prediction model...
+2025-12-26 10:09:52,975 - __main__ - INFO - Model loaded successfully
+2025-12-26 10:09:52,975 - __main__ - INFO - Prediction service initialized
+2025-12-26 10:09:52,985 - services.data_service - INFO - Successfully loaded 1826 rainfall records
+2025-12-26 10:09:52,985 - __main__ - INFO - Data service initialized
+2025-12-26 10:09:52,987 - __main__ - INFO - Blueprints registered
+2025-12-26 10:09:52,987 - __main__ - INFO - Starting application in development mode
+2025-12-26 10:09:53,002 - werkzeug - WARNING -  * Debugger is active!
+2025-12-26 10:09:53,006 - werkzeug - INFO -  * Debugger PIN: 578-556-188
+2025-12-26 10:10:38,732 - __main__ - INFO - Loading prediction model...
+2025-12-26 10:10:39,397 - __main__ - INFO - Model loaded successfully
+2025-12-26 10:10:39,398 - __main__ - INFO - Prediction service initialized
+2025-12-26 10:10:39,411 - services.data_service - INFO - Successfully loaded 1826 rainfall records
+2025-12-26 10:10:39,411 - __main__ - INFO - Data service initialized
+2025-12-26 10:10:39,414 - __main__ - INFO - Blueprints registered
+2025-12-26 10:10:39,415 - __main__ - INFO - Starting application in development mode
+2025-12-26 10:10:39,443 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-12-26 10:10:39,443 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-12-26 10:10:39,445 - werkzeug - INFO -  * Restarting with stat
+2025-12-26 10:10:52,509 - __main__ - INFO - Loading prediction model...
+2025-12-26 10:10:53,148 - __main__ - INFO - Model loaded successfully
+2025-12-26 10:10:53,148 - __main__ - INFO - Prediction service initialized
+2025-12-26 10:10:53,160 - services.data_service - INFO - Successfully loaded 1826 rainfall records
+2025-12-26 10:10:53,160 - __main__ - INFO - Data service initialized
+2025-12-26 10:10:53,162 - __main__ - INFO - Blueprints registered
+2025-12-26 10:10:53,163 - __main__ - INFO - Starting application in development mode
+2025-12-26 10:10:53,184 - werkzeug - WARNING -  * Debugger is active!
+2025-12-26 10:10:53,189 - werkzeug - INFO -  * Debugger PIN: 578-556-188
+2025-12-26 10:10:53,225 - werkzeug - INFO - 127.0.0.1 - - [26/Dec/2025 10:10:53] "GET / HTTP/1.1" 200 -
+2025-12-26 10:10:53,450 - werkzeug - INFO - 127.0.0.1 - - [26/Dec/2025 10:10:53] "GET /static/js/main.js HTTP/1.1" 200 -
+2025-12-26 10:10:53,483 - werkzeug - INFO - 127.0.0.1 - - [26/Dec/2025 10:10:53] "GET /static/css/main.css HTTP/1.1" 200 -
+2025-12-26 10:10:54,841 - __main__ - WARNING - 404 error: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-12-26 10:10:54,841 - werkzeug - INFO - 127.0.0.1 - - [26/Dec/2025 10:10:54] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-12-26 10:23:42,840 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\Documents\\14D_Code\\14D_Code\\run_evaluate.py', reloading
+2025-12-26 10:23:44,162 - werkzeug - INFO -  * Restarting with stat
+2025-12-26 10:23:56,939 - __main__ - INFO - Loading prediction model...
+2025-12-26 10:23:57,736 - __main__ - INFO - Model loaded successfully
+2025-12-26 10:23:57,737 - __main__ - INFO - Prediction service initialized
+2025-12-26 10:23:57,760 - services.data_service - INFO - Successfully loaded 1826 rainfall records
+2025-12-26 10:23:57,760 - __main__ - INFO - Data service initialized
+2025-12-26 10:23:57,764 - __main__ - INFO - Blueprints registered
+2025-12-26 10:23:57,765 - __main__ - INFO - Starting application in development mode
+2025-12-26 10:23:57,796 - werkzeug - WARNING -  * Debugger is active!
+2025-12-26 10:23:57,803 - werkzeug - INFO -  * Debugger PIN: 578-556-188
+2025-12-26 10:28:25,650 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\Documents\\14D_Code\\14D_Code\\generate_confusion_matrix.py', reloading
+2025-12-26 10:28:26,879 - werkzeug - INFO -  * Restarting with stat
+2025-12-26 10:28:38,356 - __main__ - INFO - Loading prediction model...
+2025-12-26 10:28:38,907 - __main__ - INFO - Model loaded successfully
+2025-12-26 10:28:38,908 - __main__ - INFO - Prediction service initialized
+2025-12-26 10:28:38,916 - services.data_service - INFO - Successfully loaded 1826 rainfall records
+2025-12-26 10:28:38,916 - __main__ - INFO - Data service initialized
+2025-12-26 10:28:38,919 - __main__ - INFO - Blueprints registered
+2025-12-26 10:28:38,920 - __main__ - INFO - Starting application in development mode
+2025-12-26 10:28:38,935 - werkzeug - WARNING -  * Debugger is active!
+2025-12-26 10:28:38,940 - werkzeug - INFO -  * Debugger PIN: 578-556-188
+2025-12-26 10:35:00,653 - werkzeug - INFO -  * Detected change in 'C:\\Users\\PC\\Documents\\14D_Code\\14D_Code\\generate_per_class_metrics.py', reloading
+2025-12-26 10:35:02,106 - werkzeug - INFO -  * Restarting with stat
+2025-12-26 10:35:15,088 - __main__ - INFO - Loading prediction model...
+2025-12-26 10:35:15,838 - __main__ - INFO - Model loaded successfully
+2025-12-26 10:35:15,839 - __main__ - INFO - Prediction service initialized
+2025-12-26 10:35:15,870 - services.data_service - INFO - Successfully loaded 1826 rainfall records
+2025-12-26 10:35:15,870 - __main__ - INFO - Data service initialized
+2025-12-26 10:35:15,876 - __main__ - INFO - Blueprints registered
+2025-12-26 10:35:15,877 - __main__ - INFO - Starting application in development mode
+2025-12-26 10:35:15,914 - werkzeug - WARNING -  * Debugger is active!
+2025-12-26 10:35:15,924 - werkzeug - INFO -  * Debugger PIN: 578-556-188

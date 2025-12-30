@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atmospheric Data Lab - Dự đoán Mưa Vệ tinh</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+    
+    <div class="container">
+        <nav class="nav-bar">
+            <a href="{{ url_for('main.predict') }}" class="nav-brand">
+                <i class="bi bi-cloud-drizzle icon"></i>
+                <span>Atmospheric Lab</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="{{ url_for('main.predict') }}" class="nav-link active">Dự đoán</a></li>
+                <li><a href="{{ url_for('main.rainfall_data') }}" class="nav-link">Dữ liệu</a></li>
+            </ul>
+        </nav>
+
+        
+        <div class="prediction-grid">
+            
+            <div class="card">
+                <div class="card-header">
+                    <i class="bi bi-cloud-arrow-up icon"></i>
+                    <h2 class="card-title">Phân tích Ảnh Vệ tinh</h2>
+                </div>
+
+                <p class="card-description">
+                    Mô hình ResNet34 dự đoán mức độ mưa cho 3 giờ tiếp theo (14h-17h) dựa trên ảnh vệ tinh Aqua MODIS (1:30 PM).
+                </p>
+
+                <form action="{{ url_for('main.predict') }}" method="POST" enctype="multipart/form-data">
+                    <div class="upload-zone">
+                        <div class="upload-icon">
+                            <i class="bi bi-cloud-upload"></i>
+                        </div>
+                        <div class="upload-text">Kéo thả ảnh vào đây hoặc click để chọn</div>
+                        <div class="upload-hint">.TIF  .TIFF  .PNG  .JPG</div>
+                        <input type="file" name="file" accept=".tiff,.tif,.jpg,.jpeg,.png" required>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <i class="bi bi-lightning-charge"></i>
+                        <span>Bắt đầu Phân tích</span>
+                    </button>
+                </form>
+            </div>
+
+            
+            <div class="card">
+                <div class="card-header">
+                    <i class="bi bi-graph-up icon"></i>
+                    <h2 class="card-title">Kết quả Phân tích</h2>
+                </div>
+
+                <div class="results-section">
+                    {% if label %}
+                        <div class="risk-display">
+                            <center>
+                                <div class="risk-badge {{ risk_color }}">
+                                    {% if 'CAO' in risk_level %}
+                                        <i class="bi bi-exclamation-triangle-fill"></i>
+                                    {% elif 'Trung Bình' in risk_level %}
+                                        <i class="bi bi-exclamation-circle-fill"></i>
+                                    {% else %}
+                                        <i class="bi bi-check-circle-fill"></i>
+                                    {% endif %}
+                                    {{ risk_level }}
+                                </div>
+                            </center>
+
+                            <div class="risk-details">
+                                <div class="risk-metric">
+                                    <span class="metric-label">PHÂN LOẠI</span>
+                                    <span class="metric-value">{{ label.split('|')[0].replace('Dự đoán:', '').strip() }}</span>
+                                </div>
+                                <div class="risk-metric">
+                                    <span class="metric-label">MỨC ĐỘ RỦI RO</span>
+                                    <span class="metric-value">{{ risk_level.split('(')[0].strip() }}</span>
+                                </div>
+                                <div class="risk-metric">
+                                    <span class="metric-label">ĐỘ TIN CẬY</span>
+                                    <span class="metric-value">{{ label.split('(')[1].split(')')[0] if '(' in label else 'N/A' }}</span>
+                                </div>
+                            </div>
+
+                            {% if img_data %}
+                                <div class="result-image">
+                                    <img src="data:image/png;base64,{{ img_data }}" class="preview-img" alt="Satellite Image">
+                                </div>
+                            {% endif %}
+                        </div>
+                    {% else %}
+                        <div class="empty-state">
+                            <div class="icon">
+                                <i class="bi bi-cloud-fog"></i>
+                            </div>
+                            <p class="empty-text">Chưa có dữ liệu phân tích</p>
+                            <p style="font-size: 0.85rem; margin-top: 0.5rem; opacity: 0.7;">
+                                Tải lên ảnh vệ tinh để xem kết quả dự đoán
+                            </p>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
+            <div class="card" style="animation-delay: 0.3s;">
+                <div class="card-header">
+                    <i class="bi bi-cpu icon"></i>
+                    <h3 class="card-title" style="font-size: 1.1rem;">Mô hình AI</h3>
+                </div>
+                <p style="color: var(--mist); font-size: 0.9rem;">
+                    ResNet34 được huấn luyện trên dữ liệu ảnh vệ tinh MODIS Aqua với độ chính xác cao.
+                </p>
+            </div>
+
+            <div class="card" style="animation-delay: 0.4s;">
+                <div class="card-header">
+                    <i class="bi bi-shield-check icon"></i>
+                    <h3 class="card-title" style="font-size: 1.1rem;">Độ tin cậy</h3>
+                </div>
+                <p style="color: var(--mist); font-size: 0.9rem;">
+                    Hệ thống cung cấp mức độ tin cậy cho mỗi dự đoán, giúp đánh giá chất lượng kết quả.
+                </p>
+            </div>
+
+            <div class="card" style="animation-delay: 0.5s;">
+                <div class="card-header">
+                    <i class="bi bi-clock-history icon"></i>
+                    <h3 class="card-title" style="font-size: 1.1rem;">Dự báo 3 giờ</h3>
+                </div>
+                <p style="color: var(--mist); font-size: 0.9rem;">
+                    Dự đoán lượng mưa cho khoảng thời gian 3 giờ tiếp theo từ 14h-17h chiều.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+torch
+torchvision
+tqdm
+numpy
+tifffile
+Pillow
+matplotlib
+tensorboard
+flask
+flask-cors
+pandas
+scikit-learn
+python-dotenv
